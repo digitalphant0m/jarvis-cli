@@ -1,0 +1,23 @@
+{
+  "name": "jarvis-cli",
+  "version": "1.0.0",
+  "description": "a simple nodejs app to retrieve marvel data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalphant0m/jarvis-cli.git"
+  },
+  "author": "digtialphantom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digitalphant0m/jarvis-cli/issues"
+  },
+  "homepage": "https://github.com/digitalphant0m/jarvis-cli#readme",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "marvel-api": "^1.1.0"
+  }
+}
