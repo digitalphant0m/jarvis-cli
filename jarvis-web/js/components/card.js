@@ -1,9 +1,8 @@
-let constants = require('./constants')
 var card = function(arr) {
   
   for (var x=0; x<arr.length; x++) { 
     var card = document.createElement('div')
-    card.style.width = '25%'
+    card.style.width = '15%'
     card.className = 'w3-card-4'
     card.style.marginTop = '8px'
     card.style.marginLeft = '8px'
@@ -36,11 +35,24 @@ var card = function(arr) {
 
     var cardContainer = document.createElement('div')
     cardContainer.className = 'w3-container w3-center'
+    cardContainer.style.paddingBottom = '20px'
     card.append(cardContainer)
 
     var note = document.createElement('p')
     note.innerHTML = arr[x].description
-    cardContainer.append(note)
+    //cardContainer.append(note)
+
+    var name = document.createElement('p')
+    name.innerHTML = arr[x].name
+    cardContainer.append(name)
+
+    
+    let a = document.createElement('a')
+    a.className = 'w3-button'
+    a.innerHTML = 'More Info'
+    a.href = '#/thor'
+
+    cardContainer.append(a)
 
     content.append(card)
   }

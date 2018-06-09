@@ -5,6 +5,7 @@ var hash = '#';
 var router = new Navigo(root, useHash, hash);
 var HomeView = require('./views/home-view')
 var AvengersView = require('./views/avengers-view')
+var ThorView = require('./views/thor-view')
 
 router  
 .on( function () {
@@ -16,5 +17,12 @@ router
   document.getElementById('content').innerHTML = ''
   AvengersView()
 })
+
+
+.on('/thor', function () {
+  document.getElementById('content').innerHTML = ''
+  ThorView()
+})
+
 
 .resolve();
