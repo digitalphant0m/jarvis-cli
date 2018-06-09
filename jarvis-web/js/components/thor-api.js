@@ -6,11 +6,7 @@ var getThor = function() {
     if(this.readyState == 4){
 
       let res = JSON.parse(this.responseText)
-
-      if(res[0].name == 'Thor') {
-        console.log(res[0])
-        detailCard(res[0])
-      }
+      detailCard(res[0])
 
     }
   }
