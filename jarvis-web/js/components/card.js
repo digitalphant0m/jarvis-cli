@@ -1,11 +1,20 @@
+let constants = require('./constants')
 var card = function(arr) {
   
   for (var x=0; x<arr.length; x++) { 
     var card = document.createElement('div')
     card.style.width = '25%'
     card.className = 'w3-card-4'
+    card.style.marginTop = '8px'
+    card.style.marginLeft = '8px'
+    card.style.marginRight = '8px'
+    card.style.marginBottom = '8px'
+    card.style.float = 'left'
+    card.style.display = 'inline'
 
     var img = document.createElement('img')
+    img.style.width = '100%'
+
 
     if(arr[x].name == 'Hulk'){
       img.src = '/assets/littlehulk.png'

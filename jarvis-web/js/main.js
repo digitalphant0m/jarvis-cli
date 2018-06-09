@@ -3,15 +3,18 @@ var root = 'http://localhost:3000/#'
 var useHash = true;
 var hash = '#';
 var router = new Navigo(root, useHash, hash);
-var Api = require('./components/api.js')
+var HomeView = require('./views/home-view')
+var AvengersView = require('./views/avengers-view')
 
-router.on('/avengers', function () {
-      let api = new Api()
-      let content = document.getElementById('content').innerHTML = ''
-      let av =  document.getElementById('avengers')
-      av.onclick = api.getData()
+router  
+.on( function () {
+  document.getElementById('content').innerHTML = ''
+  HomeView()
+})
 
-      content.append(av)
-  })
+.on('/avengers', function () {
+  document.getElementById('content').innerHTML = ''
+  AvengersView()
+})
 
 .resolve();

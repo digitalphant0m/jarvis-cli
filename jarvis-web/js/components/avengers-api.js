@@ -5,7 +5,6 @@ var getAvengers = function() {
   req.onreadystatechange = function() {
     if(this.readyState == 4){
 
-      let card = new Card()
       createCard(JSON.parse(this.responseText))
     }
   }
