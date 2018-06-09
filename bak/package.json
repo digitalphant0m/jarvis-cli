@@ -18,6 +18,12 @@
   "homepage": "https://github.com/digitalphant0m/jarvis-cli#readme",
   "dependencies": {
     "commander": "^2.15.1",
-    "marvel-api": "^1.1.0"
+    "marvel-api": "^1.1.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "express": "^4.16.3",
+    "webpack": "^4.6.0",
+    "webpack-dev-middleware": "^3.1.3"
   }
 }
