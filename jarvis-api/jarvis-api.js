@@ -1,3 +1,4 @@
+require('dotenv').config()
 let express = require('express')
 let app = express()
 let Marvel = require('./avengers')
@@ -12,8 +13,8 @@ app.use(function(req, res, next){
 app.get('/', function(request,response) {
 
   var avengers = new Marvel({
-    publicKey : 'c2489fcd2d8ead99b5caa7e5ab898fab',
-    privateKey : 'b64d2faa654fcbb7d2a37cfb4b62b353a4f06e0e'
+    publicKey : process.env.MARVEL_PUBLIC_KEY,
+    privateKey : process.env.MARVEL_PRIVATE_KEY
   })
 
   avengers.assemble(function(avengers){
